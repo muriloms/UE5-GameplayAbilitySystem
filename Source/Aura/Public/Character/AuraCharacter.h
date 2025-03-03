@@ -19,6 +19,9 @@ class AURA_API AAuraCharacter : public AAuraCharacterBase
 public:
 	AAuraCharacter();
 
+	virtual void PossessedBy(AController* NewController) override;
+	virtual void OnRep_PlayerState() override;
+
 protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Camera")
@@ -26,4 +29,7 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Camera")
 	UCameraComponent* Camera;
+
+private:
+	void InitAbilityActorInfo();
 };
