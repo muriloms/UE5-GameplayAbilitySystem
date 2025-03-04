@@ -3,6 +3,7 @@
 
 #include "Character/AuraCharacter.h"
 
+
 #include "AbilitySystemComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
@@ -26,7 +27,7 @@ AAuraCharacter::AAuraCharacter()
 	// Create and attach Camera
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	Camera->SetupAttachment(SpringArm);
-	Camera->bUsePawnControlRotation = true; // Camera rotation handled by SpringArm
+	Camera->bUsePawnControlRotation = false; // Câmera fixa no SpringArm
 
 
 	GetCharacterMovement()->bOrientRotationToMovement = true;
