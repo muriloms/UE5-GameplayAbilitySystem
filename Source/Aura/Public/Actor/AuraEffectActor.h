@@ -27,5 +27,5 @@ protected:
 	TSubclassOf<UGameplayEffect> InstantGameplayEffectClass;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Applied Effects")
-	TSubclassOf<UGameplayEffect> DurationGameplayEffectClass;car
+	TSubclassOf<UGameplayEffect> DurationGameplayEffectClass;
 };
